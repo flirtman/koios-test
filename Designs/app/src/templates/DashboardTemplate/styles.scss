@@ -1,0 +1,48 @@
+$leftColSize : 300px;
+$mainColor: #ccc;
+
+.dashboard-template {
+  min-height: 100vh;
+  display: flex;
+  width: 100%;
+
+  .left-navigation {
+    background-color: $mainColor;
+    width: $leftColSize;
+    padding: 50px 25px;
+    justify-content: normal;
+    display: flex;
+    flex-direction: column;
+
+    img {
+      margin: 0 auto;
+      max-width: 100px;
+    }
+
+    .nav {
+      margin: 25px 0;
+      padding: 0 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      li {
+        a, .logout-btn {
+          text-decoration: none;
+          color: black;
+          font-size: 1.5rem;
+          cursor: pointer;
+
+          &:hover {
+            color: green;
+          }
+        }
+      }
+    }
+  }
+
+  .main-container {
+    width: calc(100% - #{$leftColSize});
+    padding: 25px;
+  }
+}
